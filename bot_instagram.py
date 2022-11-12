@@ -1,14 +1,13 @@
-import os
-from dotenv import load_dotenv
+from dotenv import dotenv_values
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from time import sleep
 from random import randint
 
-load_dotenv()
-USER = os.getenv('USER')
-PASSWORD = os.getenv('PASSWORD')
+config = dotenv_values(".env")
+USER = config['USER']
+PASSWORD = config['PASSWORD']
 
 # Google Chrome 107.0.5304.110
 chromedrive_path = './chromedriver'
@@ -43,8 +42,6 @@ btn_not_now_notifications = browser.find_element(
 btn_not_now_notifications.click()
 
 sleep(1)
-
-# profiles = ['rampazzoamanda']
 
 browser.get('https://www.instagram.com/rampazzoamanda/')
 

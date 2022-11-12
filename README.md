@@ -8,19 +8,3 @@
 2. python3.10 -m venv .venv
 3. source .venv/bin/activate
 4. python3.10 -m pip install -r requirements.txt
-
-
-
-deactivate
-
-
-# Main.py
-from dotenv import dotenv_values
-
-config = dotenv_values(".env")
-print(config['SECRET_TOKEN'])
-
-
-# .env
-ACCESS_TOKEN=ABC123
-SECRET_TOKEN=SUPERSECRET123
