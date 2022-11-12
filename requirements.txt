@@ -1,0 +1,5 @@
+wheel==0.38.4
+black==22.10.0
+flake8==5.0.4
+python-dotenv==0.21.0
+selenium==4.6.0
